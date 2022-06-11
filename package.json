@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon app/server.js -e js,hbs",
+    "data": "node scripts/data-fill.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

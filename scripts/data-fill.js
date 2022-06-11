@@ -8,7 +8,7 @@ const books = [];
 fs.createReadStream('./data/books.csv')
   .pipe(csv.parse())
   .on('error', error => console.error(error))
-//   .on('data', row => books.push(row))
+  .on('data', row => books.push(row))
   .on('end', () => {
         books.forEach(book => {
             const url = `${BASE_URL}/books`
@@ -34,7 +34,7 @@ const schools = []
 fs.createReadStream('./data/schools.csv')
   .pipe(csv.parse())
   .on('error', error => console.error(error))
-//   .on('data', row => schools.push(row))
+  .on('data', row => schools.push(row))
   .on('end', () => {
         schools.forEach(school => {
             const url = `${BASE_URL}/schools`
