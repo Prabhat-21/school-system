@@ -1,0 +1,36 @@
+const db = require("../models/index")
+const express = require('express');
+const router = new express.Router()
+const studentbookAssociation = db.studentbookAssociation;
+
+
+router.post('/bookAssociation', async (req, res) => {
+    const studentBook = studentbookAssociation.build(req.body);
+    try {
+        await studentBook.save()
+        res.status(201).send(studentBook)
+    } catch (e) {
+        res.status(400).send(e)
+    }
+})
+
+router.get('/bookAssociation/:id', async (req, res) => {
+    const _id = req.params.id
+
+    try {
+        const studentBook = await studentbookAssociation.findByPk(_id)
+
+        if (!studentBook) {
+            return res.status(404).send()
+        }
+        res.send(studentBook)
+    } catch (e) {
+        res.status(500).send()
+    }
+})
+
+
+
+module.exports=router
+
+    

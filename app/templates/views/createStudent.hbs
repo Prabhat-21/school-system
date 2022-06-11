@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Create a Student</title>
+</head>
+
+<body>
+
+<form>
+        <p>Use this form to create a student</p>
+
+  <p>Please fill all the details</p>
+  <label for="first_name">First Name</label>
+  <input required="true" type="text" id="first_name" name="first_name">
+  <br>
+  <label for="last_name">Last Name</label>
+  <input required="true" type="text" id="last_name" name="last_name">
+  <br>
+  <label for="email">Email</label>
+  <input required="true" type="email" id="email" name="email">
+  <br>
+  <label for="gender">Gender</label>
+  <input required="true" type="text" id="gender" name="gender">
+  <br>
+  <label for="school_name">School Name</label>
+  <input required="true" type="text" id="school_name" name="school_name">
+  <br>
+  <label for="books_read">Books Read(separated by comma)</label>
+  <input required="true" type="text" id="books_read" name="books_read">
+  <br>
+  <button>Submit</button>
+</form>
+
+
+    {{>footer}}
+
+<script src="/js/createStudent.js"></script>
+
+</body>
+
+</html>
