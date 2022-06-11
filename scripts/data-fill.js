@@ -20,8 +20,7 @@ fs.createReadStream('./data/books.csv')
             }
             console.log(body)
             request.post(url, { json: true, method: 'POST', body: body },
-             (error, data) => {
-                 console.log(data.body)
+             (error) => {
                 if (error) {
                     console.log("error")    
                 }
@@ -48,8 +47,7 @@ fs.createReadStream('./data/schools.csv')
             }
             console.log(body)
             request.post(url, { json: true, method: 'POST', body: body },
-             (error, data) => {
-                 console.log(data.body)
+             (error) => {
                 if (error) {
                     console.log("error")    
                 }
@@ -76,8 +74,7 @@ fs.createReadStream('./data/students.csv')
             }
             console.log(body)
             request.post(url, { json: true, method: 'POST', body: body },
-             (error, data) => {
-                 console.log(data.body)
+             (error) => {
                 if (error) {
                     console.log("error")    
                 }
